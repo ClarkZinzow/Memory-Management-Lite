@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include "mem.h"
+
+int Mem_Init(int sizeOfRegion) {
+  int memRequest = (sizeOfRegion % getpagesize() == 0) ? sizeOfRegion :
+                   sizeOfRegion + (sizeOfRegion % getpagesize());
+}
+
+void* Mem_Alloc(int size) {
+  
+}
+
+int Mem_Free(void* ptr) {
+  
+}
+
+int Mem_Available() {
+  
+}
+
+void Mem_Dump() {
+  
+}
